@@ -1,0 +1,8 @@
+services:
+  openroad-upc:
+    image: bibanez135/openroad-upc-v1
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/notebooks
+    restart: unless-stopped
