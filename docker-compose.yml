@@ -1,8 +1,10 @@
 services:
   openroad-upc:
-    image: bibanez135/openroad-upc-v1
+    image: openroad-upc
+    build: ./
+    user: ${UID}:${GID}
     ports:
       - "8888:8888"
     volumes:
-      - .:/notebooks
+      - .:/workspace
     restart: unless-stopped
